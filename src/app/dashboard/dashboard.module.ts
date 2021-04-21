@@ -13,6 +13,8 @@ import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatSortModule} from '@angular/material/sort';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   imports: [
@@ -27,6 +29,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatTableModule,
     MatPaginatorModule,
     FlexLayoutModule,
+    MatSortModule,
+    MatInputModule,
   ],
   declarations: [
     DashboardComponent,
