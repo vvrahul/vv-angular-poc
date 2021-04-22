@@ -4,3 +4,7 @@
 mat-form-field {
     padding: 10px;
 }
+.exportButton {
+    width:100px;
+    float: right;
+}

@@ -27,8 +27,9 @@ export class LoginComponent implements OnInit {
       //   alert('Successfully Logged In');
       // })
       localStorage.setItem('isLoggedIn', 'true');
-      this.router.navigate(['dashboard/users']);
+      
       alert('Successfully Logged In');
+      this.router.navigate(['dashboard/users']);
 
     }
   }

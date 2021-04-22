@@ -3,7 +3,9 @@
   <div class="mat-elevation-z8" fxFlex="50" fxLayout="column">
     <mat-form-field fxFlex="40%">
       <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Filter">
+      
     </mat-form-field>
+    <button mat-raised-button color="primary"  aria-label="icon-button with cloud_download icon" class="exportButton" (click)="exportUser()"> <mat-icon>cloud_download</mat-icon> Export</button>
     <table  mat-table [dataSource]="dataSource" fxFlex="100" matSort matSortStart="desc" >
 
       <!--- Note that these columns can be defined in any order.

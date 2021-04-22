@@ -1,3 +1,4 @@
+import { UsersService } from './users/users.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard.component';
@@ -16,6 +17,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatSortModule} from '@angular/material/sort';
 import { MatInputModule } from '@angular/material/input';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -32,6 +34,7 @@ import { MatInputModule } from '@angular/material/input';
     MatSortModule,
     MatInputModule,
   ],
+  providers: [UsersService],
   declarations: [
     DashboardComponent,
     LayoutComponent,

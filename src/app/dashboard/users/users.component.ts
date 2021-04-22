@@ -1,3 +1,4 @@
+import { UsersService } from './users.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -42,7 +43,7 @@ export class UsersComponent implements OnInit {
     this.dataSource.sort = this.sort;
   }
 
-  constructor() { }
+  constructor(private userService: UsersService) { }
 
   ngOnInit() {
   }
@@ -50,6 +51,10 @@ export class UsersComponent implements OnInit {
   doFilter(value: string) {
     this.dataSource.filter = value.trim().toLocaleLowerCase();
 
+  }
+  exportUser() {
+    
+    this.userService.downloadFile(USER_DATA, 'users', ['usersId', 'name', 'email', 'mobile'])
   }
 
 }
